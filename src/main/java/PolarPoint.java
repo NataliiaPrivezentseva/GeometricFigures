@@ -1,6 +1,10 @@
 class PolarPoint {
-    private double r = 0;
-    private double t = 0;
+    private final double r;
+    private final double t;
+
+    PolarPoint() {
+        this(0, 0);
+    }
 
     PolarPoint(double r, double t) {
         this.r = r;

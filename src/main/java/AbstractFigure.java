@@ -2,8 +2,8 @@ abstract class AbstractFigure implements Figure {
     private CartesianPoint originCartesian;
     private PolarPoint originPolar;
 
-    AbstractFigure(){
-        originCartesian = new CartesianPoint(0, 0);
+    AbstractFigure() {
+        originCartesian = new CartesianPoint();
         originPolar = convertToPolarCoordinates();
     }
 
@@ -18,7 +18,8 @@ abstract class AbstractFigure implements Figure {
     }
 
     private PolarPoint convertToPolarCoordinates() {
-        double r = Math.sqrt(originCartesian.getX() * originCartesian.getX() + originCartesian.getY() * originCartesian.getY());
+        double r = Math.sqrt(originCartesian.getX() * originCartesian.getX() +
+                originCartesian.getY() * originCartesian.getY());
         double t = Math.atan(originCartesian.getX() / originCartesian.getY());
         return new PolarPoint(r, t);
     }
