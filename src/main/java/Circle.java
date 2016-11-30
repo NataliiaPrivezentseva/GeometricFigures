@@ -18,7 +18,7 @@ public class Circle extends AbstractFigure {
 
     @Override
     public String getFigureName() {
-        return "circle";
+        return CIRCLE_NAME;
     }
 
     public double getPerimeter() {

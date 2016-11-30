@@ -1,5 +1,4 @@
 import java.util.InputMismatchException;
-import java.util.Scanner;
 
 class FigureDemonstration {
 
@@ -9,11 +8,9 @@ class FigureDemonstration {
     }
 
     private static void demonstrateFigureMoving(Figure myFigure) {
-        System.out.println("Выберете, в какой системе кооддинат вы хотите переместить стартовую точку фигуры:\n" +
-                "1 — Cartesian System\n" +
-                "2 — Polar System\n");
-        Scanner chosenSystemForMove = new Scanner(System.in);
-        int systemForMove = chosenSystemForMove.nextInt();
+        int systemForMove = Input.getOriginKind("Chose Coordinate system in which you want set point for moving figure:\n" +
+                "1 — Cartesian system\n" +
+                "2 — Polar system\n", 2);
         switch (systemForMove) {
             case 1:
                 demonstrateMovingCartesian(myFigure);

@@ -22,7 +22,7 @@ class Rectangle extends AbstractFigure {
 
     @Override
     public String getFigureName() {
-        return "rectangle";
+        return RECTANGLE_NAME;
     }
 
     public double getPerimeter() {

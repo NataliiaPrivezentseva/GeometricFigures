@@ -23,7 +23,10 @@ class FiguresCreator {
 
     private static Figure createRectangle() {
         Figure myFigure;
-        int origin = Input.getOriginKind();
+        int origin = Input.getOriginKind("Chose what origin do you need for your figure:\n" +
+                "1 — I want to set origin in Cartesian system\n" +
+                "2 — I want to set origin in Polar system\n" +
+                "3 — I chose default value of the origin\n", 3);
         switch (origin) {
             case 1:
                 myFigure = createRectangleInOriginCartesian();
@@ -67,7 +70,10 @@ class FiguresCreator {
 
     private static Figure createSquare() {
         Figure myFigure;
-        int origin = Input.getOriginKind();
+        int origin = Input.getOriginKind("Chose what origin do you need for your figure:\n" +
+                "1 — I want to set origin in Cartesian system\n" +
+                "2 — I want to set origin in Polar system\n" +
+                "3 — I chose default value of the origin\n", 3);
         switch (origin) {
             case 1:
                 myFigure = createSquareInOriginCartesian();
@@ -108,7 +114,10 @@ class FiguresCreator {
 
     private static Figure createCircle() {
         Figure myFigure;
-        int origin = Input.getOriginKind();
+        int origin = Input.getOriginKind("Chose what origin do you need for your figure:\n" +
+                "1 — I want to set origin in Cartesian system\n" +
+                "2 — I want to set origin in Polar system\n" +
+                "3 — I chose default value of the origin\n", 3);
         switch (origin) {
             case 1:
                 myFigure = createCircleInOriginCartesian();

@@ -18,7 +18,7 @@ class Square extends AbstractFigure {
 
     @Override
     public String getFigureName() {
-        return "square";
+        return SQUARE_NAME;
     }
 
     public double getPerimeter() {

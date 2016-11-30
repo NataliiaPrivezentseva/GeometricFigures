@@ -27,27 +27,24 @@ class Input {
         return chosenFigure;
     }
 
-    static int getOriginKind() {
+    static int getOriginKind(String message, int options) {
         int originKind = 0;
         Scanner input = new Scanner(System.in);
 
         do {
-            System.out.println("Chose what origin do you need for your figure:\n" +
-                    "1 — I want to set origin in Cartesian system\n" +
-                    "2 — I want to set origin in Polar system\n" +
-                    "3 — I chose default value of the origin\n");
+            System.out.println(message);
 
             if (!input.hasNextInt()) {
                 String usersInput = input.next();
                 System.out.println("\'" + usersInput + "\' is not proper choice! Try again!");
             } else {
                 originKind = input.nextInt();
-                if (originKind <= 0 || originKind > 3) {
+                if (originKind <= 0 || originKind > options) {
                     System.out.println("\'" + originKind + "\' is not proper choice! Try again!");
                 }
             }
         }
-        while (originKind <= 0 || originKind > 3);
+        while (originKind <= 0 || originKind > options);
 
         return originKind;
     }
