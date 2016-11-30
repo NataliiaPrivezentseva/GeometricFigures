@@ -41,22 +41,28 @@ class FiguresCreator {
 
     private static Figure createRectangleInOriginCartesian() {
         Figure myFigure;
+        String length = "length";
+        String width = "width";
         double[] origin = Input.getOrigin();
         CartesianPoint originCartesian = new CartesianPoint(origin[0], origin[1]);
-        myFigure = new Rectangle(originCartesian, Input.getLength(), Input.getWidth());
+        myFigure = new Rectangle(originCartesian, Input.getParameter(length), Input.getParameter(width));
         return myFigure;
     }
 
     private static Figure createRectangleInOriginPolar() {
         Figure myFigure;
+        String length = "length";
+        String width = "width";
         double[] origin = Input.getOrigin();
         PolarPoint originPolar = new PolarPoint(origin[0], origin[1]);
-        myFigure = new Rectangle(originPolar, Input.getLength(), Input.getWidth());
+        myFigure = new Rectangle(originPolar, Input.getParameter(length), Input.getParameter(width));
         return myFigure;
     }
 
     private static Figure createRectangleInDefaultOrigin() {
-        return new Rectangle(Input.getLength(), Input.getWidth());
+        String length = "length";
+        String width = "width";
+        return new Rectangle(Input.getParameter(length), Input.getParameter(width));
     }
 
     private static Figure createSquare() {
@@ -77,25 +83,28 @@ class FiguresCreator {
         }
     }
 
-    // написать ли новый метод для получения стороны квадрата? или как приравнять сторону квадрата к ширине или длине?
+    // приравнять сторону квадрата к ширине или длине?
     private static Figure createSquareInOriginCartesian() {
         Figure myFigure;
+        String side = "side";
         double[] origin = Input.getOrigin();
         CartesianPoint originCartesian = new CartesianPoint(origin[0], origin[1]);
-        myFigure = new Square(originCartesian, Input.getLength());
+        myFigure = new Square(originCartesian, Input.getParameter(side));
         return myFigure;
     }
 
     private static Figure createSquareInOriginPolar() {
         Figure myFigure;
+        String side = "side";
         double[] origin = Input.getOrigin();
         PolarPoint originPolar = new PolarPoint(origin[0], origin[1]);
-        myFigure = new Square(originPolar, Input.getLength());
+        myFigure = new Square(originPolar, Input.getParameter(side));
         return myFigure;
     }
 
     private static Figure createSquareInDefaultOrigin() {
-        return new Square(Input.getLength());
+        String side = "side";
+        return new Square(Input.getParameter(side));
     }
 
     private static Figure createCircle() {
@@ -118,22 +127,25 @@ class FiguresCreator {
 
     private static Figure createCircleInOriginCartesian() {
         Figure myFigure;
+        String radius = "radius";
         double[] origin = Input.getOrigin();
         CartesianPoint originCartesian = new CartesianPoint(origin[0], origin[1]);
-        myFigure = new Circle(originCartesian, Input.getRadius());
+        myFigure = new Circle(originCartesian, Input.getParameter(radius));
         return myFigure;
     }
 
     private static Figure createCircleInOriginPolar() {
         Figure myFigure;
+        String radius = "radius";
         double[] origin = Input.getOrigin();
         PolarPoint originPolar = new PolarPoint(origin[0], origin[1]);
-        myFigure = new Circle(originPolar, Input.getRadius());
+        myFigure = new Circle(originPolar, Input.getParameter(radius));
         return myFigure;
     }
 
     private static Figure createCircleInDefaultOrigin() {
-        return new Circle(Input.getRadius());
+        String radius = "radius";
+        return new Circle(Input.getParameter(radius));
     }
 
 }

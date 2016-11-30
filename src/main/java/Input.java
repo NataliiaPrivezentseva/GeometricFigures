@@ -72,58 +72,22 @@ class Input {
         return originPoint;
     }
 
-    // последние три метода очень подобны. Следует ли это упростить?
-    static double getLength() {
-        double length;
+    static double getParameter(String parameterName) {
+        double parameter;
         Scanner input = new Scanner(System.in);
 
         do {
-            System.out.println("Please, enter length of your figure.  It must be positive number");
+            System.out.println("Please, enter " + parameterName + " of your figure.  It must be positive number");
 
             while (!input.hasNextDouble()) {
                 String usersInput = input.next();
-                System.out.println("\'" + usersInput + "\' — improper value of length. " +
-                        "Please, enter the proper length of the figure");
+                System.out.println("\'" + usersInput + "\' — improper value of " + parameterName +
+                        "! Please, enter the proper length of the figure");
             }
-            length = input.nextDouble();
-        } while (length <= 0);
+            parameter = input.nextDouble();
+        } while (parameter <= 0);
 
-        return length;
+        return parameter;
     }
 
-    static double getWidth() {
-        double width;
-        Scanner input = new Scanner(System.in);
-
-        do {
-            System.out.println("Please, enter width of your figure.  It must be positive number");
-
-            while (!input.hasNextDouble()) {
-                String usersInput = input.next();
-                System.out.println("\'" + usersInput + "\' — improper value of the width. " +
-                        "Please, enter the proper width of the figure");
-            }
-            width = input.nextDouble();
-        } while (width <= 0);
-
-        return width;
-    }
-
-    static double getRadius() {
-        double radius;
-        Scanner input = new Scanner(System.in);
-
-        do {
-            System.out.println("Please, enter radius of your figure.  It must be positive number");
-
-            while (!input.hasNextDouble()) {
-                String usersInput = input.next();
-                System.out.println("\'" + usersInput + "\' — improper value of the radius. " +
-                        "Please, enter the proper radius of the figure");
-            }
-            radius = input.nextDouble();
-        } while (radius <= 0);
-
-        return radius;
-    }
 }
