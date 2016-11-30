@@ -68,7 +68,6 @@ class Input {
                 counter++;
             }
         }
-        System.out.println("You set following coordinates of origin: (" + originPoint[0] + ", " + originPoint[1] + ")");
         return originPoint;
     }
 

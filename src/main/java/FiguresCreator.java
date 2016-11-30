@@ -83,7 +83,6 @@ class FiguresCreator {
         }
     }
 
-    // приравнять сторону квадрата к ширине или длине?
     private static Figure createSquareInOriginCartesian() {
         Figure myFigure;
         String side = "side";

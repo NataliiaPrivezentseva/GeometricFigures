@@ -20,6 +20,11 @@ class Rectangle extends AbstractFigure {
         this.width = width;
     }
 
+    @Override
+    public String getFigureName() {
+        return "rectangle";
+    }
+
     public double getPerimeter() {
         return 2 * length + 2 * width;
     }

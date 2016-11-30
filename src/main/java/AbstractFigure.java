@@ -47,4 +47,6 @@ abstract class AbstractFigure implements Figure {
     public PolarPoint getPolarCoordinates() {
         return originPolar;
     }
+
+    public abstract String getFigureName();
 }

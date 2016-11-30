@@ -16,6 +16,11 @@ public class Circle extends AbstractFigure {
         this.radius = radius;
     }
 
+    @Override
+    public String getFigureName() {
+        return "circle";
+    }
+
     public double getPerimeter() {
         return 2 * Math.PI * radius;
     }

@@ -1,4 +1,6 @@
 interface Figure {
+    String getFigureName();
+
     double getPerimeter();
 
     double getArea();

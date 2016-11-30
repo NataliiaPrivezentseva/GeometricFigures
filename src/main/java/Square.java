@@ -16,6 +16,11 @@ class Square extends AbstractFigure {
         this.side = side;
     }
 
+    @Override
+    public String getFigureName() {
+        return "square";
+    }
+
     public double getPerimeter() {
         return 4 * side;
     }
